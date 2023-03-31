@@ -116,9 +116,9 @@ ul{
 
 @keyframes carrousel {
     0% {background-image: url("img/img-1-MD.jpg");} 
-    30% {background-image: url("img/img-1-Prog.jpg");} 
-    60%{background-image: url("img/img-2-MD.jpg");}   
-    90% {background-image: url("img/img-2-Prog.jpg");}  
+    25% {background-image: url("img/img-1-Prog.jpg");} 
+    50%{background-image: url("img/img-2-MD.jpg");}   
+    75% {background-image: url("img/img-2-Prog.jpg");}  
 }
 
 .icons{
@@ -303,7 +303,7 @@ p.copyright{
     .menu .menu-name td{ font-size: 2rem; }
     .menu .menu-ingredients{ font-size: 1.4rem; }
 
-    /*footer{ text-align: right; }*/
+   
 
     footer{
         display: block;
@@ -317,8 +317,4 @@ p.copyright{
     }
 }
 
-/* No lo estoy usando, hago PC first, ja */
-@media only screen and (min-width: 769px) {     /* For Desktop: */
-
-}
 
