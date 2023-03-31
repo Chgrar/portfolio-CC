@@ -21,7 +21,7 @@ body{
 
 
 main{
-    background-image: url(".vscode/media/img/img-3-Prog.jpg");
+    background-image: url("img/img-3-Prog.jpg");
     background-size: cover;
     border-radius: 1.5rem;
 }
@@ -93,7 +93,7 @@ ul{
 }
 
 .home{
-    background-image: url(".vscode/media/img/img-1-MD.jpg");
+    background-image: url("img/img-1-MD.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 30vw;
@@ -115,10 +115,10 @@ ul{
 }
 
 @keyframes carrousel {
-    0% {background-image: url(".vscode/media/img/img/img-1-MD.jpg");} 
-    30% {background-image: url(".vscode/media/img/img-1-Prog.jpg");} 
-    60%{background-image: url(".vscode/media/img/img-2-MD.jpg");}   
-    90% {background-image: url(".vscode/media/img/img-2-Prog.jpg");}  
+    0% {background-image: url("img/img-1-MD.jpg");} 
+    30% {background-image: url("img/img-1-Prog.jpg");} 
+    60%{background-image: url("img/img-2-MD.jpg");}   
+    90% {background-image: url("img/img-2-Prog.jpg");}  
 }
 
 .icons{
