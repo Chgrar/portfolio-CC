@@ -4,46 +4,147 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agregar Metadata SEO, etc-->
+    
     <title>Portfolio</title>
-    <script src="https://kit.fontawesome.com/9c9af78d21.js" crossorigin="anonymous"></script>
+    
+
+    <!-- StyleSheets -->
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <Header>
-        <nav class="nav">
-            <img class="foto" src="img/foto.jpg" alt="foto de Christian Gil">
 
-            <h1 class="nombre"> <b>Christian Ariel Gil</b> </h1>
 
+<body onload="onStart()">
+    <header>  <!-- TODO nav con boostrap --> 
+        <div class="nav">
             <ul>
-                <span class="boton"><button><a href="#">Experiencia Laboral</a></button></span>
-               <span class="boton"><button><a href="#">Contacto</a></button></span>
-               <span class="boton" ><button><a href="#">Hobbies</a></button></span>
+                <li><a class="button button-active" href="#">Home</a></li>
+                <li><a class="button" href="#specials">Historial Académica</a></li>
+                <li><a class="button" href="#about">Sobre Mi</a></li>
+                <li><a class="button" href="#leng">Lenguajes de Programación</a></li>
+               
+            </ul>
+        </div>
+    </header>
 
-            </ul>     
-        </nav>
-    </Header>
+    <main>
+        <!-- HOME -->
+        <section class="home">
+            <div>
+                <p>Christian Ariel Gil</p>
+            </div>            
+        </section>
 
-    <main class="main">
-        <h1 class="titulos">SOBRE MI:</h1>
-                <br>
-                <h4 class="subtitulos">Programador Full Stack</h4>
-                <h4 class="subtitulos">Técnico en Prótesis Dental</h4>
-                <h6 class="subtitulos2"> <u> PERFIL PERSONAL:</u></h6>
+         <!-- ABOUT -->
+         <section id="about">
+             <h2 class="seccion">Sobre Mi:</h2>
+             <div class="about">
+                 <img class="foto" src=".vscode/media/img/foto.jpg" alt="foto de Christian Gil">
+                 <br>
+                <h4 class="subtitulos"><u>Programador Full Stack</u></h4>
+                <h4 class="subtitulos"><u>Técnico en Prótesis Dental</u></h4>
+                
                 <p><b>Como Programador, desarrollo apps y páginas web. Y cuento
                     con experiencia en docencia de niños y adultos en IT.</b></p>
                 <p><b>Como Técnico en Protesis, brindo soporte a los odontologos con la generación de prótesis
                     dentales desde mi propio laboratorio dental.</b></p> 
+                 <br>
+                <a  class="button-top fa-sharp fa-solid fa-arrow-up" href="#"> Go top</a>
+                </div>            
+        
+                <section id="specials">
+            
+                <h2 class="seccion">Historial Académico:</h2>
+                <div class="mounth">
+                    
+                <br>
+                <h3 class="subtitulos">Buenos Aires Ciudad, Programa "Codo a codo 4.0"</h3>
+                <h4 class="subtitulos">Programador Full Stack Python | 2022</h4>
+    
+                
+                <br>
+    
+                <h3 class="subtitulos">Universidad de Buenos Aires.</h3>
+                <h4 class="subtitulos">Facultad de Medicina, hasta 2do año.</h4>
+    
+                <br>
+    
+                <h3 class="subtitulos">Instituto F. Makaroff, Universidad de Lomas de Zamora</h3>
+                <h4 class="subtitulos">Técnico en protesis dental |2002</h4>
+    
+                <br>
+    
+                <h3 class="subtitulos">Escuela Normal Nac.Sup. de Profesorado Almafuerte</h3>
+                <h4 class="subtitulos">Bachiller con orientación pedagógica| 1990</h4>
+                
+                <br>
 
+                <a  class="button-top fa-sharp fa-solid fa-arrow-up" href="#"> Go top</a>
+                    
+                </section>
+        
+                <section id="leng">
+            
+                    <h2 class="seccion">Lenguajes De Programación:</h2>
+                <section class="icons">            
+                <div >
+                    <img src=".vscode/media/img/html-icono.jpg" alt="html">
+                    <h3>HTML5</h3>
+                    
+                </div>
+                <div >
+                    <img src=".vscode/media/img/css-icono.jpg" alt="css">
+                    <h3>CSS</h3>
+                    
+                </div>
+                <div >
+                    <img src=".vscode/media/img/js-icono.jpg" alt="js">
+                    <h3>Java Script </h3>
+                    
+                </div>    
+                <div >
+                    <img src=".vscode/media/img/pytho-icono.jpg" alt="Python">
+                    <h3>Python </h3>
+                    
+                </div>
+                <div >
+                    <img src=".vscode/media/img/java-icono.jpg" alt="Java">
+                    <h3>Java</h3>
+                    
+                </div>   
+                <div >
+                    <img src=".vscode/media/img/ruby-icono.jpg" alt="ruby">
+                    <h3>Ruby</h3>
+                    
+                </div>   
+                <a  class="button-top fa-sharp fa-solid fa-arrow-up" href="#" > Go top</a>
+    
+                </section>
+                </section>
+        
+            </section>
+
+       
+       
+         
+        
+       
+
+        
     </main>
 
-    <Footer class="footer">
-        <a href="https://www.facebook.com/profile.php?id=100011053629322&mibextid=ZbWKwL" class="redes"><i class="fa-brands fa-facebook"></i></a> 
-        <a href="https://www.instagram.com/christiangil72/" class="redes"><i class="fa-brands fa-instagram"></i></a> 
-        <a href="https://www.linkedin.com/in/christian-gil-baa502253/" class="redes"><i class="fa-brands fa-linkedin"></i></a> 
-        <a href="https://github.com/Chgrar" class="redes"><i class="fa-brands fa-github"></i></a> 
+    <!-- FOOTER --> 
+     <!-- TODO ver como alinear a la derecha los titulos y el copyrigh centrar --> 
+     <Footer class="footer">
+        <a href="https://www.facebook.com/profile.php?id=100011053629322&mibextid=ZbWKwL" ><i class="fa-brands fa-facebook" ></i></a> 
+        <a href="https://www.instagram.com/christiangil72/" ><i class="fa-brands fa-instagram"></i></a> 
+        <a href="https://www.linkedin.com/in/christian-gil-baa502253/" ><i class="fa-brands fa-linkedin"></i></a> 
+        <a href="https://github.com/Chgrar" ><i class="fa-brands fa-github"></i></a> 
     </Footer>
 
     
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/63cf427ec6.js" crossorigin="anonymous"></script>
 </body>
 </html>

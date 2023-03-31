@@ -1,57 +1,194 @@
- .foto{
-    border-radius: 50%;
-    max-width: 10rem;
-    max-height: 10rem;
-    border-style: solid;
-    margin: 1rem;
+ /* IMPORTS: Google Fonts, etc */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+/* NORMALIZE */
+html{
+    font-size: 62.5%;
 }
 
-.nombre{
-    font-size: 3rem;
-}
-
-.boton{
-    padding: 1rem;
-    margin: 0.5rem;
-    border-radius: 20%;
+*{
+    margin: 0.2rem;
     padding: 0.2rem;
-    transition-property: all;
-    transition-duration: 1s;
-    transition-delay: 0.5s;
-    transition-timing-function: ease-in;
-    list-style-type: none;
-    box-shadow:8px 8px 10px 0
 }
 
-.main{
-    text-align: center;
-    background-color: azure;
-    
+body{
+    font-family: "Merriweather", serif;
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    background-color: rgba(0,127,0,0.24);
 }
 
-.nav{
+
+main{
+    background-image: url(".vscode/media/img/img-3-Prog.jpg");
+    background-size: cover;
+    border-radius: 1.5rem;
+}
+
+header{
+    float:right;
+    z-index: 10;
+}
+
+.foto{
+    border-radius: 50%;
+    max-width: 20rem;
+    max-height: 20rem;
+    margin-top: -5rem;
+    margin-left: 25rem;
+    border-style: solid;
+   
+}
+
+ul{
     display: flex;
-    background-color: rgb(161, 161, 161);
-    justify-content: space-between;
-    align-items: center;
-    background-size: auto;
-    color: white;
-
+    flex-wrap: wrap;
+    list-style-type: none;    
 }
 
-.titulos{
-    color: rgba(5, 30, 98, 0.908) ;
-    font-size: 3rem;
+/* CLASSES */
+.button{
+    background-color: white; 
+    color: black;
+    font-weight: 600;
+    border: 2px solid #276683c0;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    margin: 2rem 2rem -1rem -1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.button.button-active{
+    background-color: #5cbeebc0;
+}
+.button:hover {     /* Sombra al hacer hover */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #8cbfeef8;
+    color: white; 
+    transition-duration: 0.5s;
+}
+.button-top{
+    color: rgba(111, 151, 197, 0.829);
+    background-color: rgba(0,0,0,0.25);
+    border-radius: inherit;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;    
+    text-align: center;    
+    width: fit-content;
+    height: 2rem;
+    cursor: pointer;
+    padding: .7rem 1.5rem;
+    /*margin: 2.5rem;*/
+}
+.button-top:hover {     /* Sombra al hacer hover */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #4c74af;
+    color: white; 
 }
 
-.subtitulos{
-    color: rgba(54, 93, 200, 0.908) ;
+.home{
+    background-image: url(".vscode/media/img/img-1-MD.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vw;
+    margin: 2rem;
+    border-radius: 2rem;
+    animation-name: carrousel;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.home div{
+    position: absolute;
+    right: 6vw;
+    top: 18vw;
+    background-color: rgba(136, 198, 226, 0.726);
+    border-radius: 2rem; 
+    text-align: center;
+    font-size: min(5rem, 3.5vw);
+}
+
+@keyframes carrousel {
+    0% {background-image: url(".vscode/media/img/img/img-1-MD.jpg");} 
+    30% {background-image: url(".vscode/media/img/img-1-Prog.jpg");} 
+    60%{background-image: url(".vscode/media/img/img-2-MD.jpg");}   
+    90% {background-image: url(".vscode/media/img/img-2-Prog.jpg");}  
+}
+
+.icons{
+    display: grid;
+    text-align: center;
+    color:#111;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: rgba(77, 115, 241, 0.95);
+    border-radius: 2rem;
+    padding: 5rem;
+    gap: 3rem;
+    margin: 2rem;
     font-size: 2rem;
 }
-.subtitulos2{
-    color: rgba(54, 93, 200, 0.908) ;
-    font-size: 1rem;
+.icons img{
+    width: min(30%, 150px);
 }
+
+
+.seccion{
+    font-size: 4rem;
+    color: black;
+    text-align: center;
+    background-color: rgba(136, 198, 226, 0.726);
+    border-radius: 10rem 2rem;
+    margin: 0 15rem -1.2rem 15rem;
+}
+
+.mounth{
+    text-align: center;
+    margin: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: rgba(77, 115, 241, 0.95);
+    border-radius: 2rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+.about{
+    font-family: "Caveat", serif;
+    font-size: min(4rem, 3.5vw);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
+    background-color: rgba(77, 115, 241, 0.95);
+    border-radius: 2rem;
+
+}
+.about div{
+    vertical-align: bottom;
+    text-align: center;
+}
+
+
+
+.menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem;
+    background-color: rgba(175,200,200,0.80);
+    border: 5px solid rgba(0,0,127,0.5);
+    border-radius: 2rem;
+    color: rgb(17, 5, 121);
+}
+.menu .menu-name td{ font-size: 2.5rem; }
+.menu .menu-ingredients{ font-size: 1.6rem; font-style: italic; }
+.menu th{ font-size: 2.5rem; padding-top: 2.5rem; }
+
 
 
 footer{
@@ -60,10 +197,128 @@ footer{
     justify-content: center ;
     align-items: center ;
     padding: 1em;
+    border-radius: 1.5rem;
+    
 }
 
-.redes{
-    padding: 4px;
-   margin-right: 1rem;
+
+
+input[type=text], input[type=email], select, textarea {
+    width: min(100%, 500px);
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.50),0 17px 50px 0 rgba(0,0,0,0.75);
+}
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    float: center;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.socialmedia{
+    font-size: 4rem;
+    text-align: center;
+}
+.socialmedia span{
+    font-size: min(2rem, 5vw);
+    vertical-align: super;
+    color: rgb(100, 22, 76);
+}
+
+p.copyright{
+    text-align: center;
+}
+
+
+/* Media Query - RESPONSIVE */
+@media only screen and (max-width: 600px) {     /* For cellphones: */
+    .button{ margin: 2rem 0 0 2rem; }
+
+    .home{ height: 50vw; }
+    .home div { top: 36vw; }
+
+    .icons{
+        display: block;
+        font-size: 1.6rem;
+    }
+    .icons img{ width: 15%; }
+    .seccion{
+        font-size: 2.8rem;
+        border-radius: 5rem 1rem;
+        margin: 0 8rem -1.2rem 8rem;
+    }
+    .mounth{
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 1.6rem;
+    }
+    .menu{ display: block; }
+    .menu th{ font-size: 1.8rem; }
+    .menu .menu-name td{ font-size: 1.7rem; }
+    .menu .menu-ingredients{ font-size: 1.2rem; }
+    .foto{margin-top: 0;}
+
+    footer{
+        display: block;
+        background-image: none;   
+        text-align: center;
+    }
+    footer iframe{ width: 90vw; height: 75vw; }
+
+    input[type=text], input[type=email], select, textarea {
+        width: 80%;
+    }
 
 }
+@media only screen and (min-width: 601px) and (max-width: 768px) {     /* For tablets: */
+    .button{
+        margin: 2rem 2rem 0 2rem;
+    }
+
+    .home{ height: 40vw; }
+    .home div { top: 28vw; }
+    .foto{margin-top: 0;}
+    .icons{
+        font-size: 1.6rem;
+    }
+    .icons img{
+        width: 40%;
+    }
+    .seccion{
+        font-size: 3.5rem;
+        border-radius: 5rem 1rem;
+        margin: 0 8rem -1.2rem 8rem;
+    }
+    .mounth{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .menu th{ font-size: 2rem; }
+    .menu .menu-name td{ font-size: 2rem; }
+    .menu .menu-ingredients{ font-size: 1.4rem; }
+
+    /*footer{ text-align: right; }*/
+
+    footer{
+        display: block;
+        background-image: none;   
+        text-align: center;
+    }
+    footer iframe{ width: 75vw; height: 60vw; }
+
+    input[type=text], input[type=email], select, textarea {
+        width: 35rem;
+    }
+}
+
+/* No lo estoy usando, hago PC first, ja */
+@media only screen and (min-width: 769px) {     /* For Desktop: */
+
+}
+
