@@ -1,8 +1,8 @@
- /* IMPORTS: Google Fonts, etc */
+ 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-/* NORMALIZE */
+
 html{
     font-size: 62.5%;
 }
@@ -84,7 +84,9 @@ ul{
     height: 2rem;
     cursor: pointer;
     padding: .7rem 1.5rem;
-    /*margin: 2.5rem;*/
+    text-shadow: 0 0 1rem #ccc;
+
+   
 }
 .button-top:hover {     /* Sombra al hacer hover */
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -198,7 +200,17 @@ footer{
     align-items: center ;
     padding: 1em;
     border-radius: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    color: #000;
+    text-shadow: 0 0 1rem #ccc;
     
+}
+
+#apirest{
+    background-color: rgba(255,255,255,0.25);
+    color: black;
+    text-align: center;
+    border-radius: 2rem;
 }
 
 
