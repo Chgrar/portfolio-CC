@@ -42,7 +42,7 @@ async function getClima(){
     document.querySelector("#temp").innerHTML=`La temperatura actual es de: <i>${data.current.temperature} ºC</i>`
     document.querySelector("#windspeed").innerHTML=`La velocidad del viento es de: <i>${data.current.wind_speed} km/h</i>`
     if((data.current.temperature>16 && data.current.temperature<25) && data.current.wind_speed<10)
-        document.querySelector("#advice").innerHTML=`<b>Te recomiendo salir sin abrigo</b>`
+        document.querySelector("#advice").innerHTML=`<b>Te recomiendo salir sin abrigo!</b>`
     else
-        document.querySelector("#advice").innerHTML=`<b>Te recomiendo salir con abrigo</b>`
+        document.querySelector("#advice").innerHTML=`<b>Te recomiendo salir con abrigo!</b>`
 };
