@@ -24,11 +24,11 @@ function validarFormulario(evento) {
     }
     alert('Formulario enviado exitosamente.')
     this.submit();
-}
+};
 
 function onStart(){     
     getClima();
-}
+};
 
 // API REST del clima
 async function getClima(){
@@ -36,13 +36,13 @@ async function getClima(){
     api_url += "access_key=bd2a60e7b3b796c0734c62e26fb16d9e";   // Access Key
     api_url += "&query=Buenos Aires&units=m";                   // Ubicación y unidad
     const response = await fetch(api_url);
-    
+    //console.log(response);    // Okey
     const data = await response.json();
-   
+    
     document.querySelector("#temp").innerHTML=`La temperatura actual es de: <i>${data.current.temperature} ºC</i>`
     document.querySelector("#windspeed").innerHTML=`La velocidad del viento es de: <i>${data.current.wind_speed} km/h</i>`
-    // if((data.current.temperature>16 && data.current.temperature<25) && data.current.wind_speed<10)
-    //     document.querySelector("#advice").innerHTML=`<b>Te recomiendo aprovechar el dia para pasear</b>`
-    // else
-    //     document.querySelector("#advice").innerHTML=`<b>Te recomiendo salir con un abrigo</b>`
-}
+    if((data.current.temperature>16 && data.current.temperature<25) && data.current.wind_speed<10)
+        document.querySelector("#advice").innerHTML=`<b>Te recomiendo salir sin abrigo</b>`
+    else
+        document.querySelector("#advice").innerHTML=`<b>Te recomiendo salir con abrigo</b>`
+};
